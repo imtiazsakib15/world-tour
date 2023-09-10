@@ -1,9 +1,15 @@
-const Country = ({country}) => {
-  const { name, flags } = country;
+import "./Country.css";
+const Country = ({ country }) => {
+  const { name, flags, region, area, maps } = country;
   return (
-    <div>
+    <div className="country">
       <img src={flags?.png} alt={flags.alt} />
-      {/* <h3>{name?.common}</h3> */}
+      <h2>{name?.common}</h2>
+      <div>
+        <p>Region: {region}</p>
+        <p>Area: {area}SqKm</p>
+        <a href={maps.googleMaps}>Location on Google Map</a>
+      </div>
     </div>
   );
 };
