@@ -25,12 +25,16 @@ const Countries = () => {
       <div>
         <h5>My Visited Countries:</h5>
         <div className="visited-country-container">
-        {visitedCountries.map((country, index) => (
-          <div key={index}>
-            <img className="visited-country-img" src={country?.flag} alt={country?.alt} />
-            <h5>{country.name}</h5>
-          </div>
-        ))}
+          {visitedCountries.map((country, index) => (
+            <div key={index}>
+              <img
+                className="visited-country-img"
+                src={country?.flag}
+                alt={country?.alt}
+              />
+              <h5>{country.name}</h5>
+            </div>
+          ))}
         </div>
       </div>
       <div className="countries-container">

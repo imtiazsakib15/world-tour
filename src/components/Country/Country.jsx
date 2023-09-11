@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import "./Country.css";
 const Country = ({ country, handleShowVisited }) => {
   const [visited, setVisited] = useState(false);
@@ -24,6 +25,11 @@ const Country = ({ country, handleShowVisited }) => {
       </button>
     </div>
   );
+};
+
+Country.propTypes = {
+  country: PropTypes.object.isRequired,
+  handleShowVisited: PropTypes.func.isRequired,
 };
 
 export default Country;
